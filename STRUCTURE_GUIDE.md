@@ -1,141 +1,189 @@
-🚀 FinPilot Folder Structure Guide
+# 🚀 FinPilot Folder Structure Guide
 
 Welcome to the FinPilot codebase! This guide helps contributors understand the folder structure and where to place different parts of the code to keep the project clean, modular, and scalable.
 
 ---
 
-📑 Table of Contents
+## 🧾 About FinPilot
 
-Project Structure Overview
-
-Frontend - client/
-
-Backend - server/
-
-Prisma ORM - prisma/
-
-Documentation - docs/
-
-Naming Conventions
-
-Tips for Contributors
+**FinPilot** is a full-stack web application designed to simplify and streamline financial claim submissions and processing. Built with **React** (frontend), **Express** (backend), and **Prisma** (ORM), the system is modular, scalable, and developer-friendly.
 
 ---
 
-🛠️ Project Structure Overview
+## 📑 Table of Contents
+
+- [🛠️ Project Structure Overview](#️-project-structure-overview)
+- [🖥️ Frontend - client/](#️-frontend---client)
+- [🖧 Backend - server/](#️-backend---server)
+- [🗃️ Prisma ORM - prisma/](#️-prisma-orm---prisma)
+- [📚 Documentation - docs/](#️-documentation---docs)
+- [🗒️ Naming Conventions](#️-naming-conventions)
+- [💡 Tips for Contributors](#️-tips-for-contributors)
+- [🧪 Feature Integration Flow Example](#️-feature-integration-flow-example)
+
+---
+
+## 🛠️ Project Structure Overview
 
 FinPilot/
 ├── client/ # React Frontend
 ├── server/ # Express Backend
-├── docs/ # Architecture diagrams, DB schema
+├── docs/ # Architecture diagrams, DB schema, API specs
 ├── prisma/ # Prisma ORM setup
 ├── README.md
 └── STRUCTURE_GUIDE.md
 
 ---
 
-🖥️ Frontend - client/
+### 📁 Folder Overview
+
+| Folder     | Description                        |
+| ---------- | ---------------------------------- |
+| `client/`  | React frontend code                |
+| `server/`  | Express backend code               |
+| `prisma/`  | ORM schema and seed files          |
+| `docs/`    | Diagrams, UI screenshots, API docs |
+| `uploads/` | Uploaded files (e.g., receipts)    |
+
+---
+
+## 🖥️ Frontend - `client/`
 
 client/
 ├── public/ # Static assets
 ├── src/
 │ ├── assets/ # Images, logos, icons
 │ ├── components/ # Reusable UI components
-│ ├── context/ # Global context (AuthContext, RoleContext)
-│ ├── hooks/ # Custom hooks (useForm, useAuth)
-│ ├── layouts/ # Shared page layouts (DashboardLayout, AuthLayout)
-│ ├── pages/ # Route-based pages (Login.jsx, ClaimForm.jsx)
-│ ├── routes/ # Route definitions for React Router
-│ ├── services/ # Axios-based API calls
-│ ├── utils/ # Utility functions (formatDate, validators)
+│ ├── context/ # Global state (e.g., AuthContext)
+│ ├── hooks/ # Custom hooks (e.g., useForm, useAuth)
+│ ├── layouts/ # Page layouts (e.g., DashboardLayout)
+│ ├── pages/ # Route-based pages (e.g., Login.jsx)
+│ ├── routes/ # React Router routes
+│ ├── services/ # API call logic (Axios)
+│ ├── utils/ # Utility functions (e.g., formatDate)
 │ ├── App.jsx # App entry point
 │ └── main.jsx # ReactDOM render logic
 
-🗂️ Where to Place Things:
+---
 
-New page? ➔ pages/
+### 🗂️ Where to Place Things:
 
-Reusable UI block? ➔ components/
-
-Global state logic? ➔ context/
-
-API call logic? ➔ services/
-
-Styling? ➔ Use Tailwind classes directly in components.
+- 📄 **New page?** ➤ `pages/`
+- ♻️ **Reusable UI block?** ➤ `components/`
+- 🧠 **Global state?** ➤ `context/`
+- 🌐 **API call logic?** ➤ `services/`
+- 🎨 **Styling?** ➤ Use **Tailwind** classes inline
 
 ---
 
-🖧 Backend - server/
+## 🖧 Backend - `server/`
 
 server/
-├── config/ # DB connection, JWT secret, environment config
-├── controllers/ # Route logic (e.g., claimController.js)
-├── middlewares/ # JWT auth, error handling, role checking
-├── models/ # Prisma or ORM models (user, claim, etc.)
+├── config/ # Environment configs (DB, JWT, etc.)
+├── controllers/ # Logic for routes (e.g., claimController.js)
+├── middlewares/ # Auth, error handling, role checking
+├── models/ # ORM models (e.g., user, claim)
 ├── routes/ # Express routers (e.g., /api/claims.js)
-├── utils/ # Helper logic (mailer.js, fileHandler.js)
-├── uploads/ # Uploaded receipts (optional)
+├── utils/ # Helpers (e.g., mailer.js)
+├── uploads/ # Uploaded receipts
 └── index.js # App entry point
-
-🗂️ Where to Place Things:
-
-New endpoint logic? ➔ controllers/
-
-New route file? ➔ routes/
-
-Need to validate auth/role? ➔ middlewares/
-
-File upload handler? ➔ utils/ or middlewares/
 
 ---
 
-🗃️ Prisma ORM - prisma/
+### 🗂️ Where to Place Things:
+
+- 🧠 **Business logic?** ➤ `controllers/`
+- 🛣️ **New API endpoint?** ➤ `routes/`
+- 🔐 **JWT/Auth check?** ➤ `middlewares/`
+- 📁 **File upload handler?** ➤ `utils/` or `middlewares/`
+
+---
+
+## 🗃️ Prisma ORM - `prisma/`
 
 prisma/
 ├── schema.prisma # Database schema
-└── seed.js # Seed data for roles/users
+└── seed.js # Seed data (roles, users, etc.)
+
+> Run `npx prisma migrate dev` to sync schema changes  
+> Run `node prisma/seed.js` to populate initial data
 
 ---
 
-📚 Documentation - docs/
+## 📚 Documentation - `docs/`
 
 docs/
-├── architecture.png # Architecture diagram
-├── db-schema.png # Database schema
-└── api-spec.md # API specs
-
-Add:
-
-ER diagrams
-
-API specifications
-
-Screenshots of the UI
-
-Contribution flowcharts
+├── architecture.png # App architecture
+├── db-schema.png # ER diagram / schema
+└── api-spec.md # Full API spec
 
 ---
 
-🗒️ Naming Conventions
+### 📝 Recommended Additions:
 
-Follow these conventions for consistency:
-
-Type Format Example
-
-Components PascalCase LoginForm.jsx
-Functions camelCase handleSubmit()
-Files kebab-case user-routes.js
-Variables camelCase userEmail
-Constants UPPER_SNAKE MAX_CLAIM_AMOUNT
+- ✅ ER diagrams
+- ✅ API specifications
+- ✅ UI screenshots
+- ✅ Flowcharts (contribution, request lifecycle)
 
 ---
 
-💡 Tips for Contributors
+## 🗒️ Naming Conventions
 
-✅ Keep each feature modular. ✅ Don’t mix business logic into routes (use controllers/). ✅ Use context/ and hooks/ for global frontend state. ✅ Validate all user input on client and server sides. ✅ Write clear, meaningful commit messages. ✅ Ask in discussions or issues if unsure where to place your code.
+| Type       | Format        | Example            |
+| ---------- | ------------- | ------------------ |
+| Components | `PascalCase`  | `LoginForm.jsx`    |
+| Functions  | `camelCase`   | `handleSubmit()`   |
+| Files      | `kebab-case`  | `user-routes.js`   |
+| Variables  | `camelCase`   | `userEmail`        |
+| Constants  | `UPPER_SNAKE` | `MAX_CLAIM_AMOUNT` |
 
-> Happy contributing! 🚀
+> 🔁 Consistency = Clean Code
 
 ---
 
-For detailed steps on contribution workflows, please check CONTRIBUTING.md.
+## 💡 Tips for Contributors
+
+✅ Keep features modular  
+✅ Keep routes clean, move logic to controllers  
+✅ Use `context/` and `hooks/` for global state  
+✅ Validate input on both client and server  
+✅ Write meaningful commit messages  
+✅ Ask questions via Issues/Discussions if unsure
+
+---
+
+## 🧪 Feature Integration Flow Example
+
+Let’s say you're adding a **"Travel Reimbursement"** feature.
+
+### 1. Backend
+
+- ➕ Create a new route: `server/routes/travelRoutes.js`
+- 🧠 Add controller: `server/controllers/travelController.js`
+- 🧩 Update model if needed: `server/models/claim.js`
+
+### 2. Frontend
+
+- 🖼️ Create page: `client/pages/TravelForm.jsx`
+- 🔗 Add API logic: `client/services/travelService.js`
+- 📐 Use layout: `client/layouts/DashboardLayout.jsx`
+- ♻️ Use reusable inputs: `client/components/InputField.jsx`
+
+---
+
+## 📎 Related Files
+
+- [README.md](./README.md)
+- [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+## 🏁 Happy Contributing! 🚀
+
+---
+
+![React](https://img.shields.io/badge/frontend-react-blue)
+![Express](https://img.shields.io/badge/backend-express-green)
+![Prisma](https://img.shields.io/badge/ORM-prisma-blueviolet)
+![Node.js](https://img.shields.io/badge/runtime-node.js-brightgreen)
