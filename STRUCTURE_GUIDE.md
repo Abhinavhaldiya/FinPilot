@@ -12,18 +12,18 @@ Welcome to the FinPilot codebase! This guide helps contributors understand the f
 
 ## 📑 Table of Contents
 
-- [🛠️ Project Structure Overview](#️-project-structure-overview)
-- [🖥️ Frontend - client/](#️-frontend---client)
-- [🖧 Backend - server/](#️-backend---server)
-- [🗃️ Prisma ORM - prisma/](#️-prisma-orm---prisma)
-- [📚 Documentation - docs/](#️-documentation---docs)
-- [🗒️ Naming Conventions](#️-naming-conventions)
-- [💡 Tips for Contributors](#️-tips-for-contributors)
-- [🧪 Feature Integration Flow Example](#️-feature-integration-flow-example)
+- [Project Structure Overview](#project-structure-overview)
+- [Frontend - client](#frontend---client)
+- [Backend - server](#backend---server)
+- [Prisma ORM - prisma](#prisma-orm---prisma)
+- [Documentation - docs](#documentation---docs)
+- [Naming Conventions](#naming-conventions)
+- [Tips for Contributors](#tips-for-contributors)
+- [Feature Integration Flow Example](#feature-integration-flow-example)
 
 ---
 
-## 🛠️ Project Structure Overview
+## Project Structure Overview
 
 FinPilot/  
 ├── client/ # React Frontend  
@@ -47,7 +47,7 @@ FinPilot/
 
 ---
 
-## 🖥️ Frontend - client/
+## Frontend - client/
 
 client/  
 ├── public/ # Static assets  
@@ -76,7 +76,7 @@ client/
 
 ---
 
-## 🖧 Backend - server/
+## Backend - server/
 
 server/  
 ├── config/ # Environment configs (DB, JWT, etc.)  
@@ -99,7 +99,7 @@ server/
 
 ---
 
-## 🗃️ Prisma ORM - prisma/
+## Prisma ORM - prisma/
 
 prisma/  
 ├── schema.prisma # Database schema  
@@ -110,7 +110,7 @@ prisma/
 
 ---
 
-## 📚 Documentation - docs/
+## Documentation - docs/
 
 docs/  
 ├── architecture.png # App architecture  
@@ -128,7 +128,7 @@ docs/
 
 ---
 
-## 🗒️ Naming Conventions
+## Naming Conventions
 
 | Type       | Format        | Example            |
 | ---------- | ------------- | ------------------ |
@@ -142,7 +142,7 @@ docs/
 
 ---
 
-## 💡 Tips for Contributors
+## Tips for Contributors
 
 ✅ Keep features modular  
 ✅ Keep routes clean, move logic to controllers  
@@ -153,7 +153,7 @@ docs/
 
 ---
 
-## 🧪 Feature Integration Flow Example
+## Feature Integration Flow Example
 
 Let’s say you're adding a **"Travel Reimbursement"** feature.
 
