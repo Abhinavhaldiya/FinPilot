@@ -10,27 +10,27 @@ Welcome to the FinPilot codebase! This guide helps contributors understand the f
 
 ---
 
-## 📚 Table of Contents
+## 📑 Table of Contents
 
-- [Project Structure Overview](#project-structure-overview)
-- [Frontend – client](#frontend--client)
-- [Backend – server](#backend--server)
-- [Prisma ORM – prisma](#prisma-orm--prisma)
-- [Documentation – docs](#documentation--docs)
-- [Naming Conventions](#naming-conventions)
-- [Tips for Contributors](#tips-for-contributors)
-- [Feature Integration Flow Example](#feature-integration-flow-example)
+- [🛠️ Project Structure Overview](#project-structure-overview)
+- [🖥️ Frontend - client/](#frontend---client)
+- [🖧 Backend - server/](#backend---server)
+- [🗃️ Prisma ORM - prisma/](#prisma-orm---prisma)
+- [📚 Documentation - docs/](#documentation---docs)
+- [🗒️ Naming Conventions](#naming-conventions)
+- [💡 Tips for Contributors](#tips-for-contributors)
+- [🧪 Feature Integration Flow Example](#feature-integration-flow-example)
 
 ---
 
 ## 🛠️ Project Structure Overview
 
 FinPilot/
-├── client/ # React Frontend
-├── server/ # Express Backend
-├── docs/ # Architecture diagrams, DB schema, API specs
-├── prisma/ # Prisma ORM setup
-├── README.md
+├── client/ # React Frontend  
+├── server/ # Express Backend  
+├── docs/ # Architecture diagrams, DB schema, API specs  
+├── prisma/ # Prisma ORM setup  
+├── README.md  
 └── STRUCTURE_GUIDE.md
 
 ---
@@ -47,21 +47,21 @@ FinPilot/
 
 ---
 
-## 🖥️ Frontend - `client/`
+## 🖥️ Frontend - client/
 
-client/
-├── public/ # Static assets
-├── src/
-│ ├── assets/ # Images, logos, icons
-│ ├── components/ # Reusable UI components
-│ ├── context/ # Global state (e.g., AuthContext)
-│ ├── hooks/ # Custom hooks (e.g., useForm, useAuth)
-│ ├── layouts/ # Page layouts (e.g., DashboardLayout)
-│ ├── pages/ # Route-based pages (e.g., Login.jsx)
-│ ├── routes/ # React Router routes
-│ ├── services/ # API call logic (Axios)
-│ ├── utils/ # Utility functions (e.g., formatDate)
-│ ├── App.jsx # App entry point
+client/  
+├── public/ # Static assets  
+├── src/  
+│ ├── assets/ # Images, logos, icons  
+│ ├── components/ # Reusable UI components  
+│ ├── context/ # Global state (e.g., AuthContext)  
+│ ├── hooks/ # Custom hooks (e.g., useForm, useAuth)  
+│ ├── layouts/ # Page layouts (e.g., DashboardLayout)  
+│ ├── pages/ # Route-based pages (e.g., Login.jsx)  
+│ ├── routes/ # React Router routes  
+│ ├── services/ # API call logic (Axios)  
+│ ├── utils/ # Utility functions (e.g., formatDate)  
+│ ├── App.jsx # App entry point  
 │ └── main.jsx # ReactDOM render logic
 
 ---
@@ -76,16 +76,16 @@ client/
 
 ---
 
-## 🖧 Backend - `server/`
+## 🖧 Backend - server/
 
-server/
-├── config/ # Environment configs (DB, JWT, etc.)
-├── controllers/ # Logic for routes (e.g., claimController.js)
-├── middlewares/ # Auth, error handling, role checking
-├── models/ # ORM models (e.g., user, claim)
-├── routes/ # Express routers (e.g., /api/claims.js)
-├── utils/ # Helpers (e.g., mailer.js)
-├── uploads/ # Uploaded receipts
+server/  
+├── config/ # Environment configs (DB, JWT, etc.)  
+├── controllers/ # Logic for routes (e.g., claimController.js)  
+├── middlewares/ # Auth, error handling, role checking  
+├── models/ # ORM models (e.g., user, claim)  
+├── routes/ # Express routers (e.g., /api/claims.js)  
+├── utils/ # Helpers (e.g., mailer.js)  
+├── uploads/ # Uploaded receipts  
 └── index.js # App entry point
 
 ---
@@ -99,10 +99,10 @@ server/
 
 ---
 
-## 🗃️ Prisma ORM - `prisma/`
+## 🗃️ Prisma ORM - prisma/
 
-prisma/
-├── schema.prisma # Database schema
+prisma/  
+├── schema.prisma # Database schema  
 └── seed.js # Seed data (roles, users, etc.)
 
 > Run `npx prisma migrate dev` to sync schema changes  
@@ -110,11 +110,11 @@ prisma/
 
 ---
 
-## 📚 Documentation - `docs/`
+## 📚 Documentation - docs/
 
-docs/
-├── architecture.png # App architecture
-├── db-schema.png # ER diagram / schema
+docs/  
+├── architecture.png # App architecture  
+├── db-schema.png # ER diagram / schema  
 └── api-spec.md # Full API spec
 
 ---
