@@ -12,20 +12,20 @@ Welcome to the FinPilot codebase! This guide helps contributors understand the f
 
 ## 📑 Table of Contents
 
-- [🛠️ Project Structure Overview](-#project-structure-overview)
-- [🖥️ Frontend - client/](-#frontend---client)
-- [🖧 Backend - server/](-#backend---server)
-- [🗃️ Prisma ORM - prisma/](-#prisma-orm---prisma)
-- [📚 Documentation - docs/](-#documentation---docs)
-- [🗒️ Naming Conventions](-#naming-conventions)
-- [💡 Tips for Contributors](-#tips-for-contributors)
-- [🧪 Feature Integration Flow Example](-#feature-integration-flow-example)
+- [🛠️ Project Structure Overview](#️-project-structure-overview)
+- [🖥️ Frontend - client/](#️-frontend---client)
+- [🖧 Backend - server/](#️-backend---server)
+- [🗃️ Prisma ORM - prisma/](#️-prisma-orm---prisma)
+- [📚 Documentation - docs/](#️-documentation---docs)
+- [🗒️ Naming Conventions](#️-naming-conventions)
+- [💡 Tips for Contributors](#️-tips-for-contributors)
+- [🧪 Feature Integration Flow Example](#️-feature-integration-flow-example)
 
 ---
 
 ## 🛠️ Project Structure Overview
 
-FinPilot/
+FinPilot/  
 ├── client/ # React Frontend  
 ├── server/ # Express Backend  
 ├── docs/ # Architecture diagrams, DB schema, API specs  
