@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { DollarSign, Lock, Mail, Building, ArrowRight, User } from "lucide-react";
+import { DollarSign, Lock, Mail, Building, ArrowRight, User, Eye } from "lucide-react";
 import { Button } from "@/components/custom/Button";
 import { Input } from "@/components/custom/Input";
 import { Label } from "@/components/custom/Label";
@@ -81,8 +81,8 @@ const Auth = () => {
             <span>Trusted by 500+ companies worldwide</span>
           </div>
           <div className="flex items-center gap-4 text-white/80">
-            <Lock className="w-5 h-5" />
-            <span>Bank-grade security and compliance</span>
+            <Eye className="w-5 h-5" />
+            <span>Transparency comes first</span>
           </div>
         </div>
       </div>
@@ -230,7 +230,7 @@ const Auth = () => {
                     </RadioGroup>
                   </div>
                 )}
-                
+
                 {!isLogin && role === "Employee" && (
                   <>
                     <div className="space-y-2">
