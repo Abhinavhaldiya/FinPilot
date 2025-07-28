@@ -14,20 +14,22 @@ const Auth = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [role, setRole] = useState("Employee");
+  const [managerId, setManagerId] = useState("");
+  const [hrId, setHrId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Basic validation for sign up
     if (!isLogin && password !== confirmPassword) {
       alert("Passwords don't match");
       setIsLoading(false);
       return;
     }
-    
+
     // Simulate authentication process
     setTimeout(() => {
       setIsLoading(false);
@@ -67,7 +69,7 @@ const Auth = () => {
               expense management
             </h2>
             <p className="text-xl text-white/90">
-              Modern, secure, and efficient expense tracking and approval 
+              Modern, secure, and efficient expense tracking and approval
               workflows for enterprise teams.
             </p>
           </div>
@@ -93,8 +95,8 @@ const Auth = () => {
               {isLogin ? "Welcome back" : "Create your account"}
             </h3>
             <p className="text-muted-foreground">
-              {isLogin 
-                ? "Sign in to your FinPilot account" 
+              {isLogin
+                ? "Sign in to your FinPilot account"
                 : "Join FinPilot to manage your expenses"
               }
             </p>
@@ -103,21 +105,19 @@ const Auth = () => {
           {/* Tab Buttons */}
           <div className="flex rounded-lg bg-muted p-1 mb-6">
             <button
-              className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all ${
-                isLogin 
-                  ? 'bg-background text-foreground shadow-sm' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
+              className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all ${isLogin
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+                }`}
               onClick={() => setIsLogin(true)}
             >
               Sign In
             </button>
             <button
-              className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all ${
-                !isLogin 
-                  ? 'bg-background text-foreground shadow-sm' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
+              className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all ${!isLogin
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+                }`}
               onClick={() => setIsLogin(false)}
             >
               Sign Up
@@ -209,14 +209,14 @@ const Auth = () => {
                     <RadioGroup value={role} onValueChange={setRole}>
                       {roleOptions.map((option) => (
                         <div key={option.value} className="flex items-start space-x-3 p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors">
-                          <RadioGroupItem 
-                            value={option.value} 
+                          <RadioGroupItem
+                            value={option.value}
                             id={option.value.toLowerCase()}
                             className="mt-0.5"
                           />
                           <div className="flex-1">
-                            <Label 
-                              htmlFor={option.value.toLowerCase()} 
+                            <Label
+                              htmlFor={option.value.toLowerCase()}
                               className="text-sm font-medium cursor-pointer"
                             >
                               {option.label}
@@ -230,10 +230,38 @@ const Auth = () => {
                     </RadioGroup>
                   </div>
                 )}
+                
+                {!isLogin && role === "Employee" && (
+                  <>
+                    <div className="space-y-2">
+                      <Label htmlFor="managerId">Manager ID</Label>
+                      <Input
+                        id="managerId"
+                        type="text"
+                        value={managerId}
+                        onChange={(e) => setManagerId(e.target.value)}
+                        placeholder="Enter your manager's ID"
+                        required
+                      />
+                    </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full" 
+                    <div className="space-y-2">
+                      <Label htmlFor="hrId">HR ID</Label>
+                      <Input
+                        id="hrId"
+                        type="text"
+                        value={hrId}
+                        onChange={(e) => setHrId(e.target.value)}
+                        placeholder="Enter your HR's ID"
+                        required
+                      />
+                    </div>
+                  </>
+                )}
+
+                <Button
+                  type="submit"
+                  className="w-full"
                   variant="enterprise"
                   disabled={isLoading}
                 >
