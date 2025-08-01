@@ -13,3 +13,37 @@ model User {
   name      String?
   createdAt DateTime @default(now())
 }
+model Employee {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  contact   String?
+  password  String
+  manager   Employee? @relation("ManagerToSubordinates", fields: [managerId], references: [id])
+  managerId Int?
+  hr        User?     @relation(fields: [hrId], references: [id])
+  hrId      Int?
+
+  leaveRequests LeaveRequest[]
+  subordinates  Employee[] @relation("ManagerToSubordinates")
+}
+
+model LeaveRequest {
+  id           Int        @id @default(autoincrement())
+  employee     Employee   @relation(fields: [employeeId], references: [id])
+  employeeId   Int
+  startDate    DateTime
+  endDate      DateTime
+  type         String     // You could use an enum if desired
+  reason       String?
+  status       LeaveStatus @default(PENDING)
+  requestedOn  DateTime   @default(now())
+  approvedBy   User?      @relation(fields: [approvedById], references: [id])
+  approvedById Int?
+}
+
+enum LeaveStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
