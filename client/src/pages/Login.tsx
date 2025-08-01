@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { DollarSign, Lock, Mail, Building, ArrowRight } from "lucide-react";
+import { DollarSign, Lock, Mail, Building, ArrowRight, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -16,7 +16,7 @@ const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simulate login process
     setTimeout(() => {
       setIsLoading(false);
@@ -53,7 +53,7 @@ const Login = () => {
               expense management
             </h2>
             <p className="text-xl text-white/90">
-              Modern, secure, and efficient expense tracking and approval 
+              Modern, secure, and efficient expense tracking and approval
               workflows for enterprise teams.
             </p>
           </div>
@@ -65,8 +65,8 @@ const Login = () => {
             <span>Trusted by 500+ companies worldwide</span>
           </div>
           <div className="flex items-center gap-4 text-white/80">
-            <Lock className="w-5 h-5" />
-            <span>Bank-grade security and compliance</span>
+            <Eye className="w-5 h-5" />
+            <span>Transparency comes first</span>
           </div>
         </div>
       </div>
@@ -126,9 +126,9 @@ const Login = () => {
                       </div>
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      className="w-full" 
+                    <Button
+                      type="submit"
+                      className="w-full"
                       variant="enterprise"
                       disabled={isLoading}
                     >
@@ -155,9 +155,9 @@ const Login = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Experience FinPilot with different user roles
                   </p>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full justify-between"
                     onClick={() => handleDemoLogin('employee')}
                     disabled={isLoading}
@@ -165,9 +165,9 @@ const Login = () => {
                     <span>Login as Employee</span>
                     <div className="w-2 h-2 bg-accent rounded-full" />
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full justify-between"
                     onClick={() => handleDemoLogin('manager')}
                     disabled={isLoading}
@@ -175,9 +175,9 @@ const Login = () => {
                     <span>Login as Manager</span>
                     <div className="w-2 h-2 bg-warning rounded-full" />
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full justify-between"
                     onClick={() => handleDemoLogin('finance')}
                     disabled={isLoading}
