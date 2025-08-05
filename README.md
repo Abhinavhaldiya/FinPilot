@@ -70,10 +70,11 @@
 - **npm** or **bun**
 
 ### 1. Clone the Repository
-```bash
+````bash
 git clone https://github.com/Abhinavhaldiya/FinPilot.git
 cd FinPilot
 ```
+
 
 ### 2. Install Dependencies
 ```bash
@@ -87,6 +88,7 @@ cd client && npm install && cd ..
 cd server && npm install && cd ..
 ```
 
+
 ### 3. Environment Setup
 ```bash
 # Copy environment templates
@@ -94,10 +96,11 @@ cp server/.env.example server/.env
 cp client/.env.example client/.env
 ```
 
-### 4. Configure Environment Variables
-Edit the `.env` files with your configuration:
 
-**Backend (`/server/.env`):**
+### 4. Configure Environment Variables
+Edit the .env files with your configuration:
+
+**Backend (/server/.env):**
 ```env
 DATABASE_URL="postgresql://username:password@localhost:5432/finpilot"
 JWT_SECRET="your-super-secret-jwt-key-here"
@@ -106,11 +109,13 @@ EMAIL_USER="your-email@gmail.com"
 EMAIL_PASS="your-app-password"
 ```
 
-**Frontend (`/client/.env`):**
+
+**Frontend (/client/.env):**
 ```env
 VITE_API_URL="http://localhost:5000/api"
 VITE_APP_NAME="FinPilot"
 ```
+
 
 ### 5. Database Setup
 ```bash
@@ -121,6 +126,7 @@ npx prisma db seed
 cd ..
 ```
 
+
 ### 6. Start Development Servers
 ```bash
 # Terminal 1 - Backend (runs on http://localhost:5000)
@@ -129,6 +135,7 @@ cd server && npm run dev
 # Terminal 2 - Frontend (runs on http://localhost:5173)
 cd client && npm run dev
 ```
+
 
 ### 7. Access the Application
 Open your browser and navigate to: **http://localhost:5173**
@@ -170,9 +177,9 @@ We welcome contributions from the community! Please see our [Contributing Guidel
 
 ### Development Workflow
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch (git checkout -b feature/amazing-feature)
+3. Commit your changes (git commit -m 'Add amazing feature')
+4. Push to the branch (git push origin feature/amazing-feature)
 5. Open a Pull Request
 
 ### Code Standards
@@ -183,11 +190,42 @@ We welcome contributions from the community! Please see our [Contributing Guidel
 
 ---
 
+## 📅 Roadmap
+Here are some planned features and improvements for upcoming releases:
+
+- [ ] Mobile app integration for expense submissions
+- [ ] AI-powered expense categorization
+- [ ] Multi-language support
+- [ ] Integration with third-party accounting tools (QuickBooks, Xero)
+- [ ] Real-time currency conversion API
+- [ ] Enhanced role-based permissions
+
+*Have a feature request? Open an [issue](../../issues) or submit a [pull request](../../pulls)!*
+
+---
+
 ## 📖 Documentation
 
 - **[Structure Guide](./STRUCTURE_GUIDE.md)** - Detailed project structure and conventions
 - **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to the project
 - **[API Documentation](./docs/api-spec.md)** - Backend API specifications
+
+---
+
+## 🌐 API Overview
+
+Here are some key API endpoints exposed by the backend:
+
+| Method | Endpoint             | Description                        |
+|--------|----------------------|------------------------------------|
+| GET    | `/api/transactions`  | Fetch all transactions             |
+| POST   | `/api/transactions`  | Add a new transaction              |
+| PUT    | `/api/transactions/:id` | Update a transaction           |
+| DELETE | `/api/transactions/:id` | Delete a transaction           |
+| GET    | `/api/users`         | Get user data                      |
+| POST   | `/api/auth/login`    | Authenticate a user                |
+
+*Full API details available in the [Documentation](#-documentation) section.*
 
 ---
 
@@ -239,5 +277,4 @@ If you find FinPilot helpful, please consider:
 ![Tailwind](https://img.shields.io/badge/styling-tailwind-cyan)
 
 </div>
-
 
