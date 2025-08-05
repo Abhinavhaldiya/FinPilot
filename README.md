@@ -70,13 +70,14 @@
 - **npm** or **bun**
 
 ### 1. Clone the Repository
-bash
+````bash
 git clone https://github.com/Abhinavhaldiya/FinPilot.git
 cd FinPilot
+```
 
 
 ### 2. Install Dependencies
-bash
+```bash
 # Install root dependencies
 npm install
 
@@ -85,49 +86,55 @@ cd client && npm install && cd ..
 
 # Install backend dependencies
 cd server && npm install && cd ..
+```
 
 
 ### 3. Environment Setup
-bash
+```bash
 # Copy environment templates
 cp server/.env.example server/.env
 cp client/.env.example client/.env
+```
 
 
 ### 4. Configure Environment Variables
 Edit the .env files with your configuration:
 
 **Backend (/server/.env):**
-env
+```env
 DATABASE_URL="postgresql://username:password@localhost:5432/finpilot"
 JWT_SECRET="your-super-secret-jwt-key-here"
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_USER="your-email@gmail.com"
 EMAIL_PASS="your-app-password"
+```
 
 
 **Frontend (/client/.env):**
-env
+```env
 VITE_API_URL="http://localhost:5000/api"
 VITE_APP_NAME="FinPilot"
+```
 
 
 ### 5. Database Setup
-bash
+```bash
 cd server
 npx prisma migrate dev
 npx prisma generate
 npx prisma db seed
 cd ..
+```
 
 
 ### 6. Start Development Servers
-bash
+```bash
 # Terminal 1 - Backend (runs on http://localhost:5000)
 cd server && npm run dev
 
 # Terminal 2 - Frontend (runs on http://localhost:5173)
 cd client && npm run dev
+```
 
 
 ### 7. Access the Application
@@ -137,6 +144,7 @@ Open your browser and navigate to: **http://localhost:5173**
 
 ## 📁 Project Structure
 
+```
 FinPilot/
 ├── client/                 # React Frontend Application
 │   ├── src/
@@ -159,7 +167,7 @@ FinPilot/
 │   └── seed.js             # Database seeding
 ├── docs/                   # Documentation and diagrams
 └── README.md
-
+```
 
 ---
 
@@ -269,3 +277,4 @@ If you find FinPilot helpful, please consider:
 ![Tailwind](https://img.shields.io/badge/styling-tailwind-cyan)
 
 </div>
+
