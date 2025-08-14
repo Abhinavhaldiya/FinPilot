@@ -36,6 +36,9 @@
 - **Intuitive Interface** - Clean, modern UI built with Tailwind CSS
 - **Fast Performance** - Optimized for speed with React and Vite
 
+### 🎬 **Frontend Animations**
+- **Smooth UI Transitions** - The frontend uses [framer-motion](https://www.framer.com/motion/) for professional, animated transitions and effects throughout the app (e.g., authentication forms, tab switches, and more).
+
 ---
 
 ## 🛠 Tech Stack
@@ -47,6 +50,7 @@
 - **Vite** - Fast build tool and development server
 - **Radix UI** - Accessible, unstyled UI components
 - **Chart.js** - Beautiful, responsive charts and graphs
+- **Framer Motion** - Production-ready motion library for React
 
 ### **Backend**
 - **Node.js** - JavaScript runtime for server-side development
