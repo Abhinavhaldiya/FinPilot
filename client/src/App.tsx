@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Claims from "./pages/Claims";
+import AddClaim from "./pages/AddClaims";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import NotFound from "./pages/NotFound";
 
@@ -17,6 +18,7 @@ const App = () => (
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/claims" element={<Claims />} />
+          <Route path="/addclaims" element={<AddClaim />} />
           <Route path="/approvals" element={<Claims />} />
           <Route path="/payments" element={<Claims />} />
           <Route path="/settings" element={<Dashboard />} />

@@ -3,6 +3,7 @@ import { Plus, TrendingUp, Clock, CheckCircle, DollarSign } from "lucide-react";
 import { Button } from "@/components/custom/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/custom/Card";
 import ClaimCard, { Claim } from "@/components/claims/ClaimCard";
+import { Link } from "react-router-dom";
 
 // Mock data for claims
 const mockClaims: Claim[] = [
@@ -90,7 +91,7 @@ const Dashboard = () => {
         </div>
         <Button variant="enterprise" size="lg" className="gap-2">
           <Plus className="w-4 h-4" />
-          New Claim
+          <Link to="/addclaims">New Claim</Link>
         </Button>
       </div>
 
