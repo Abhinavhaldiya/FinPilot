@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Plus, Filter, Search, Download } from "lucide-react";
 import { Button } from "@/components/custom/Button";
 import { Input } from "@/components/custom/Input";
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
 } from "@/components/custom/Select";
 import ClaimCard, { Claim } from "@/components/claims/ClaimCard";
 
@@ -69,10 +69,10 @@ const Claims = () => {
   // Filter claims based on search and filters
   const filteredClaims = claims.filter(claim => {
     const matchesSearch = claim.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         claim.description.toLowerCase().includes(searchQuery.toLowerCase());
+      claim.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = statusFilter === "all" || claim.status === statusFilter;
     const matchesCategory = categoryFilter === "all" || claim.category === categoryFilter;
-    
+
     return matchesSearch && matchesStatus && matchesCategory;
   });
 
@@ -89,10 +89,44 @@ const Claims = () => {
           </p>
         </div>
         <div className="flex gap-2">
-          <Button variant="outline" size="sm" className="gap-2">
+          {/* <Button variant="outline" size="sm" className="gap-2">
+            <Download className="w-4 h-4" />
+            Export
+          </Button> */}
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-2"
+            onClick={() => {
+              const csvContent = [
+                ["ID", "Title", "Amount", "Description", "Date", "Status", "Category"],
+                ...filteredClaims.map(claim => [
+                  claim.id,
+                  claim.title,
+                  claim.amount,
+                  claim.description,
+                  claim.date,
+                  claim.status,
+                  claim.category
+                ])
+              ]
+                .map(row => row.join(","))
+                .join("\n");
+
+              const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+              const url = URL.createObjectURL(blob);
+              const link = document.createElement("a");
+              link.href = url;
+              link.setAttribute("download", "claims.csv");
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
             <Download className="w-4 h-4" />
             Export
           </Button>
+
           <Button variant="enterprise" className="gap-2">
             <Plus className="w-4 h-4" />
             New Claim
@@ -113,7 +147,7 @@ const Claims = () => {
             />
           </div>
         </div>
-        
+
         <Select value={statusFilter} onValueChange={setStatusFilter}>
           <SelectTrigger className="w-full sm:w-48">
             <SelectValue placeholder="Filter by status" />
@@ -126,7 +160,7 @@ const Claims = () => {
             <SelectItem value="paid">Paid</SelectItem>
           </SelectContent>
         </Select>
-        
+
         <Select value={categoryFilter} onValueChange={setCategoryFilter}>
           <SelectTrigger className="w-full sm:w-48">
             <SelectValue placeholder="Filter by category" />
