@@ -99,7 +99,9 @@ const Dashboard = () => {
         {stats.map((stat) => {
           const Icon = stat.icon;
           return (
-            <Card key={stat.title} className="card-glow">
+            <Card key={stat.title} className="card-glow transform transition-all duration-300 
+             hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:z-10 
+             hover:bg-primary/10 hover:border-primary cursor-pointer">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
                   {stat.title}
