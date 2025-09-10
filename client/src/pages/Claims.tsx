@@ -10,6 +10,7 @@ import {
   SelectValue
 } from "@/components/custom/Select";
 import ClaimCard, { Claim } from "@/components/claims/ClaimCard";
+import { Link } from "react-router-dom";
 
 // Mock data for claims
 const mockClaims: Claim[] = [
@@ -129,7 +130,7 @@ const Claims = () => {
 
           <Button variant="enterprise" className="gap-2">
             <Plus className="w-4 h-4" />
-            New Claim
+            <Link to="/addclaims">New Claim</Link>
           </Button>
         </div>
       </div>
