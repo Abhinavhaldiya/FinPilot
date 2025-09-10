@@ -1,0 +1,25 @@
+<!-- client/public/assets/waves.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#5b21b6"/>
+      <stop offset="0.5" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#06b6d4"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <!-- big background -->
+  <rect width="1200" height="800" fill="#2b0b5a"/>
+
+  <!-- soft blob shapes -->
+  <path d="M0 400 C150 300, 300 300, 450 360 C600 420, 750 480, 900 430 C1050 380, 1200 360, 1200 360 L1200 800 L0 800 Z"
+        fill="url(#g1)" opacity="0.95"/>
+  <path d="M0 550 C150 470, 300 470, 450 520 C600 570, 750 620, 900 580 C1050 540, 1200 520, 1200 520 L1200 800 L0 800 Z"
+        fill="url(#g2)" opacity="0.85"/>
+  <circle cx="180" cy="240" r="44" fill="#7c3aed" opacity="0.9"/>
+  <circle cx="320" cy="140" r="28" fill="#06b6d4" opacity="0.85"/>
+</svg>
