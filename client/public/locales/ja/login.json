@@ -1,0 +1,20 @@
+{
+  "welcome": "お帰りなさい",
+  "signInDesc": "FinPilotアカウントにサインインしてください",
+  "tabs": {
+    "signIn": "サインイン",
+    "signUp": "サインアップ"
+  },
+  "email": "メールアドレス",
+  "emailPlaceholder": "alex@company.com",
+  "password": "パスワード",
+  "passwordPlaceholder": "••••••",
+  "signInButton": "サインイン →",
+  "help": "サポートが必要ですか？ <1>support@finpilot.com</1> に連絡してください",
+  "marketing": {
+    "headline": "<1>経費管理</1>を効率化する",
+    "description": "企業チーム向けのモダンで安全、効率的な経費追跡と承認ワークフロー。",
+    "trust": "📱 世界中の500以上の企業に信頼されています",
+    "transparency": "🔒 透明性を最優先"
+  }
+}

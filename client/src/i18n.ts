@@ -8,7 +8,7 @@ i18n
   .use(initReactI18next)
   .use(Backend)
   .init({
-    ns: ["dashboard", "claims", "addClaim", "auth"],
+    ns: ["dashboard", "claims", "addClaims", "login"],
     defaultNS: "dashboard",
     debug: true,
     lng: "en",

@@ -1,9 +1,15 @@
 // client/src/pages/Login.tsx
 import React from "react";
+import LanguageSwitcherPage from "@/components/LanguageSwitcher";
+import { Trans, useTranslation } from "react-i18next";
 
 const Login: React.FC = () => {
+  const { t } = useTranslation("login");
   return (
     <div className="min-h-screen flex">
+      <div className="absolute top-4 right-4 z-50">
+        <LanguageSwitcherPage />
+      </div>
       {/* LEFT: marketing with SVG background */}
       <div
         className="hidden md:flex w-1/2 bg-no-repeat bg-cover bg-center p-12 text-white relative"
@@ -15,21 +21,27 @@ const Login: React.FC = () => {
         <div className="relative z-10 max-w-lg self-center">
           <div className="mb-6">
             <div className="inline-flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-lg bg-white/10 flex items-center justify-center">💱</div>
+              <div className="h-10 w-10 rounded-lg bg-white/10 flex items-center justify-center">
+                💱
+              </div>
               <span className="text-xl font-semibold">FinPilot</span>
             </div>
 
             <h1 className="text-4xl font-extrabold leading-snug mb-4">
-              Streamline your <br/> expense management
+              <Trans
+                i18nKey="marketing.headline"
+                ns="login"
+                components={{ 1: <span className="text-indigo-300" /> }}
+              />
             </h1>
             <p className="text-lg text-white/80">
-              Modern, secure, and efficient expense tracking and approval workflows for enterprise teams.
+              {t("marketing.description")}
             </p>
           </div>
 
           <ul className="mt-12 space-y-3 text-sm text-white/70">
-            <li>📱 Trusted by 500+ companies worldwide</li>
-            <li>🔒 Transparency comes first</li>
+            <li>{t("marketing.trust")}</li>
+            <li>{t("marketing.transparency")}</li>
           </ul>
         </div>
       </div>
@@ -37,30 +49,52 @@ const Login: React.FC = () => {
       {/* RIGHT: login form */}
       <div className="flex-1 flex items-center justify-center bg-[#0b0b0f] p-8">
         <div className="w-full max-w-md">
-          <h2 className="text-2xl font-bold text-white mb-2">Welcome back</h2>
-          <p className="text-sm text-white/60 mb-6">Sign in to your FinPilot account</p>
+          <h2 className="text-2xl font-bold text-white mb-2">{t("welcome")}</h2>
+          <p className="text-sm text-white/60 mb-6">{t("signInDesc")}</p>
 
           {/* tabs */}
           <div className="flex gap-4 mb-6">
-            <button className="px-6 py-2 rounded-lg bg-[#15141a] text-white">Sign In</button>
-            <button className="px-6 py-2 rounded-lg bg-transparent text-white/70">Sign Up</button>
-          </div>
-
-          <div className="bg-[#0f0f14] p-6 rounded-xl shadow-xl border border-white/5">
-            <label className="text-sm text-white/70 block mb-1">Email address</label>
-            <input type="email" placeholder="alex@company.com"
-              className="w-full px-4 py-3 rounded-md bg-[#1b1b22] text-white mb-4 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-
-            <label className="text-sm text-white/70 block mb-1">Password</label>
-            <input type="password" placeholder="••••••"
-              className="w-full px-4 py-3 rounded-md bg-[#1b1b22] text-white mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-
-            <button className="w-full py-3 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 font-semibold text-white">
-              Sign In →
+            <button className="px-6 py-2 rounded-lg bg-[#15141a] text-white">
+              {t("Sign In")}
+            </button>
+            <button className="px-6 py-2 rounded-lg bg-transparent text-white/70">
+              {t("Sign Up")}
             </button>
           </div>
 
-          <p className="text-sm text-white/60 mt-6">Need help? Contact <a href="mailto:support@finpilot.com" className="text-indigo-300">support@finpilot.com</a></p>
+          <div className="bg-[#0f0f14] p-6 rounded-xl shadow-xl border border-white/5">
+            <label className="text-sm text-white/70 block mb-1">
+              {t("Email address")}
+            </label>
+            <input
+              type="email"
+              placeholder={t("emailPlaceholder")}
+              className="w-full px-4 py-3 rounded-md bg-[#1b1b22] text-white mb-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+
+            <label className="text-sm text-white/70 block mb-1">
+              {t("password")}
+            </label>
+            <input
+              type="password"
+              placeholder={t("passwordPlaceholder")}
+              className="w-full px-4 py-3 rounded-md bg-[#1b1b22] text-white mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+
+            <button className="w-full py-3 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 font-semibold text-white">
+              {t("signInButton")}
+            </button>
+          </div>
+
+          <p className="text-sm text-white/60 mt-6">
+            <Trans i18nKey="login.help">
+              {/* First child: plain text */}
+              Need help? Contact {/* Second child: <a> tag */}
+              <a href="mailto:support@finpilot.com" className="text-indigo-300">
+                support@finpilot.com
+              </a>
+            </Trans>
+          </p>
         </div>
       </div>
     </div>

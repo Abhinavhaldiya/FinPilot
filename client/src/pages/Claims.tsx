@@ -213,25 +213,25 @@ const Claims = () => {
             <div className="text-2xl font-bold text-foreground">
               {filteredClaims.length}
             </div>
-            <div className="text-sm text-muted-foreground">{t("totalClaims")}</div>
+            <div className="text-sm text-muted-foreground">{t("summary.totalClaims")}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-warning">
               {filteredClaims.filter(c => c.status === 'pending').length}
             </div>
-            <div className="text-sm text-muted-foreground">{t("pending")}</div>
+            <div className="text-sm text-muted-foreground">{t("summary.pending")}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-success">
               {filteredClaims.filter(c => c.status === 'approved' || c.status === 'paid').length}
             </div>
-            <div className="text-sm text-muted-foreground">{t("approved")}</div>
+            <div className="text-sm text-muted-foreground">{t("summary.approved")}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-primary">
               ${filteredClaims.reduce((sum, claim) => sum + claim.amount, 0).toLocaleString()}
             </div>
-            <div className="text-sm text-muted-foreground">{t("totalValue")}</div>
+            <div className="text-sm text-muted-foreground">{t("summary.totalValue")}</div>
           </div>
         </div>
       )}

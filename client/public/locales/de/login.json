@@ -1,0 +1,20 @@
+{
+  "welcome": "Willkommen zurück",
+  "signInDesc": "Melden Sie sich bei Ihrem FinPilot-Konto an",
+  "tabs": {
+    "signIn": "Anmelden",
+    "signUp": "Registrieren"
+  },
+  "email": "E-Mail-Adresse",
+  "emailPlaceholder": "alex@company.com",
+  "password": "Passwort",
+  "passwordPlaceholder": "••••••",
+  "signInButton": "Anmelden →",
+  "help": "Brauchen Sie Hilfe? Kontaktieren Sie <1>support@finpilot.com</1>",
+  "marketing": {
+    "headline": "Optimieren Sie Ihr <1>Ausgabenmanagement</1>",
+    "description": "Moderne, sichere und effiziente Ausgabenverfolgungs- und Genehmigungsabläufe für Unternehmensteams.",
+    "trust": "📱 Vertrauen von über 500 Unternehmen weltweit",
+    "transparency": "🔒 Transparenz hat oberste Priorität"
+  }
+}
