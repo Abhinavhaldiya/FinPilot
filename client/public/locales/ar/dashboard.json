@@ -1,0 +1,21 @@
+{
+  "title": "لوحة القيادة",
+  "subtitle": "نظرة عامة على طلبات مصاريفك والموافقات",
+  "stats": {
+    "totalClaims": "إجمالي المطالبات",
+    "pendingReview": "مراجعة معلقة",
+    "approved": "معتمد",
+    "totalAmount": "المبلغ الإجمالي",
+    "changeFromLastMonth": "من الشهر الماضي"
+  },
+  "recentClaims": "المطالبات الأخيرة",
+  "quickActions": "إجراءات سريعة",
+  "submitNewClaim": "تقديم مطالبة جديدة",
+  "reviewPending": "مراجعة معلقة",
+  "viewReports": "عرض التقارير",
+  "notifications": "الإشعارات",
+  "claimApproved": "تمت الموافقة عليه",
+  "paymentProcessed": "تمت معالجة دفع <1>{{amount}}</1>",
+  "viewAllClaims": "عرض جميع المطالبات",
+  "newClaim": "مطالبة جديدة"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Meine Ansprüche",
+  "subtitle": "Verwalten und verfolgen Sie Ihre Spesenanträge",
+  "noClaims": "Keine Ansprüche gefunden",
+  "clearFilters": "Filter zurücksetzen",
+  "newClaim": "Neuer Anspruch",
+  "export": "Exportieren",
+  "searchPlaceholder": "Ansprüche suchen...",
+  "filter": {
+    "status": "Nach Status filtern",
+    "category": "Nach Kategorie filtern",
+    "allStatuses": "Alle Status",
+    "allCategories": "Alle Kategorien",
+    "pending": "Ausstehend",
+    "approved": "Genehmigt",
+    "rejected": "Abgelehnt",
+    "paid": "Bezahlt"
+  },
+  "summary": {
+    "totalClaims": "Gesamtansprüche",
+    "pending": "Ausstehend",
+    "approved": "Genehmigt",
+    "totalValue": "Gesamtwert"
+  },
+  "emptyMessage": "Versuchen Sie, Ihre Such- oder Filterkriterien anzupassen"
+}

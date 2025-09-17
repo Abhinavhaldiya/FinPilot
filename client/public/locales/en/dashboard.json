@@ -1,0 +1,21 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Overview of your expense claims and approvals",
+  "stats": {
+    "totalClaims": "Total Claims",
+    "pendingReview": "Pending Review",
+    "approved": "Approved",
+    "totalAmount": "Total Amount",
+    "changeFromLastMonth": "from last month"
+  },
+  "recentClaims": "Recent Claims",
+  "quickActions": "Quick Actions",
+  "submitNewClaim": "Submit New Claim",
+  "reviewPending": "Review Pending",
+  "viewReports": "View Reports",
+  "notifications": "Notifications",
+  "claimApproved": "has been approved",
+  "paymentProcessed": "Payment of <1>{{amount}}</1> processed",
+  "viewAllClaims": "View All Claims",
+  "newClaim": "New Claim"
+}

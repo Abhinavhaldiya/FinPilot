@@ -1,0 +1,14 @@
+{
+  "logoTitle": "फिनपायलट",
+  "logoSubtitle": "एंटरप्राइज वित्त",
+  "roleSelector": "वर्तमान भूमिका",
+  "goodMorning": "सुप्रभात, {{name}}",
+  "dashboardRole": "{{role}} डैशबोर्ड",
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "myClaims": "मेरे दावे",
+    "approvals": "अनुमोदन",
+    "payments": "भुगतान",
+    "settings": "सेटिंग्स"
+  }
+}

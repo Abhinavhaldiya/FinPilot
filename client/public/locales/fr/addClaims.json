@@ -1,0 +1,18 @@
+{
+  "addClaim": {
+    "title": "Ajouter une Nouvelle Réclamation",
+    "subtitle": "Remplissez le formulaire ci-dessous pour soumettre votre réclamation de frais",
+    "back": "Retour aux Réclamations",
+    "claimType": "Type de Réclamation",
+    "date": "Date",
+    "upload": "Télécharger des Fichiers",
+    "description": "Description",
+    "contact": "Informations de Contact",
+    "amount": "Montant",
+    "submit": "Soumettre",
+    "selectPlaceholder": "Sélectionnez un Type de Réclamation",
+    "descriptionPlaceholder": "Fournissez des détails supplémentaires sur la réclamation",
+    "contactPlaceholder": "Entrez votre e-mail ou téléphone",
+    "amountPlaceholder": "Entrez le montant"
+  }
+}

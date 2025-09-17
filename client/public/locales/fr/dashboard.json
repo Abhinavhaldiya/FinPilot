@@ -1,0 +1,21 @@
+{
+  "title": "Tableau de bord",
+  "subtitle": "Aperçu de vos demandes de dépenses et approbations",
+  "stats": {
+    "totalClaims": "Total des Demandes",
+    "pendingReview": "En Attente de Révision",
+    "approved": "Approuvé",
+    "totalAmount": "Montant Total",
+    "changeFromLastMonth": "depuis le mois dernier"
+  },
+  "recentClaims": "Demandes Récentes",
+  "quickActions": "Actions Rapides",
+  "submitNewClaim": "Soumettre une Nouvelle Demande",
+  "reviewPending": "Révision en Attente",
+  "viewReports": "Voir les Rapports",
+  "notifications": "Notifications",
+  "claimApproved": "a été approuvé",
+  "paymentProcessed": "Paiement de <1>{{amount}}</1> traité",
+  "viewAllClaims": "Voir Toutes les Demandes",
+  "newClaim": "Nouvelle Demande"
+}

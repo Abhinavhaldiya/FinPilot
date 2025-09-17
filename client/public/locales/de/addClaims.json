@@ -1,0 +1,18 @@
+{
+  "addClaim": {
+    "title": "Neuen Anspruch Hinzufügen",
+    "subtitle": "Füllen Sie das untenstehende Formular aus, um Ihren Spesenantrag einzureichen",
+    "back": "Zurück zu Ansprüchen",
+    "claimType": "Anspruchstyp",
+    "date": "Datum",
+    "upload": "Dateien Hochladen",
+    "description": "Beschreibung",
+    "contact": "Kontaktinformationen",
+    "amount": "Betrag",
+    "submit": "Einreichen",
+    "selectPlaceholder": "Wählen Sie einen Anspruchstyp",
+    "descriptionPlaceholder": "Geben Sie zusätzliche Details zum Anspruch an",
+    "contactPlaceholder": "Geben Sie Ihre E-Mail oder Telefonnummer ein",
+    "amountPlaceholder": "Betrag eingeben"
+  }
+}

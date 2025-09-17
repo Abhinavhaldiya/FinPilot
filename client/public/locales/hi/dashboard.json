@@ -1,0 +1,21 @@
+{
+  "title": "डैशबोर्ड",
+  "subtitle": "आपके खर्चे दावों और अनुमोदनों का अवलोकन",
+  "stats": {
+    "totalClaims": "कुल दावे",
+    "pendingReview": "समीक्षा लंबित",
+    "approved": "स्वीकृत",
+    "totalAmount": "कुल राशि",
+    "changeFromLastMonth": "पिछले महीने से"
+  },
+  "recentClaims": "हाल के दावे",
+  "quickActions": "त्वरित क्रियाएं",
+  "submitNewClaim": "नया दावा जमा करें",
+  "reviewPending": "लंबित समीक्षा",
+  "viewReports": "रिपोर्ट देखें",
+  "notifications": "सूचनाएँ",
+  "claimApproved": "स्वीकृत किया गया है",
+  "paymentProcessed": "<1>{{amount}}</1> का भुगतान किया गया",
+  "viewAllClaims": "सभी दावे देखें",
+  "newClaim": "नया दावा"
+}

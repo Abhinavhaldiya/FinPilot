@@ -1,0 +1,26 @@
+{
+  "title": "私の請求",
+  "subtitle": "経費請求を管理および追跡する",
+  "noClaims": "請求が見つかりません",
+  "clearFilters": "フィルターをクリア",
+  "newClaim": "新しい請求",
+  "export": "エクスポート",
+  "searchPlaceholder": "請求を検索...",
+  "filter": {
+    "status": "ステータスでフィルター",
+    "category": "カテゴリでフィルター",
+    "allStatuses": "すべてのステータス",
+    "allCategories": "すべてのカテゴリ",
+    "pending": "保留中",
+    "approved": "承認済み",
+    "rejected": "拒否済み",
+    "paid": "支払い済み"
+  },
+  "summary": {
+    "totalClaims": "合計請求",
+    "pending": "保留中",
+    "approved": "承認済み",
+    "totalValue": "合計金額"
+  },
+  "emptyMessage": "検索またはフィルター条件を調整してみてください"
+}
