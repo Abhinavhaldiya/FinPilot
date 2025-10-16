@@ -1,0 +1,14 @@
+{
+  "logoTitle": "فينبايلوت",
+  "logoSubtitle": "التمويل المؤسسي",
+  "roleSelector": "الدور الحالي",
+  "goodMorning": "صباح الخير، {{name}}",
+  "dashboardRole": "لوحة التحكم {{role}}",
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "myClaims": "مطالبي",
+    "approvals": "الموافقات",
+    "payments": "المدفوعات",
+    "settings": "الإعدادات"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "addClaim": {
+    "title": "Add New Claim",
+    "subtitle": "Fill out the form below to submit your expense claim",
+    "back": "Back to Claims",
+    "claimType": "Claim Type",
+    "date": "Date",
+    "upload": "Upload Files",
+    "description": "Description",
+    "contact": "Contact Information",
+    "amount": "Amount",
+    "submit": "Submit",
+    "selectPlaceholder": "Select a Claim Type",
+    "descriptionPlaceholder": "Provide additional details about the claim",
+    "contactPlaceholder": "Enter your email or phone",
+    "amountPlaceholder": "Enter amount"
+  }
+}

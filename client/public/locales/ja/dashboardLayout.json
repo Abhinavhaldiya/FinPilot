@@ -1,0 +1,14 @@
+{
+  "logoTitle": "フィンパイロット",
+  "logoSubtitle": "エンタープライズファイナンス",
+  "roleSelector": "現在の役割",
+  "goodMorning": "おはようございます、{{name}}",
+  "dashboardRole": "{{role}} ダッシュボード",
+  "nav": {
+    "dashboard": "ダッシュボード",
+    "myClaims": "マイクレーム",
+    "approvals": "承認",
+    "payments": "支払い",
+    "settings": "設定"
+  }
+}

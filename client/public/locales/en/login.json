@@ -1,0 +1,20 @@
+{
+  "welcome": "Welcome back",
+  "signInDesc": "Sign in to your FinPilot account",
+  "tabs": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "email": "Email address",
+  "emailPlaceholder": "alex@company.com",
+  "password": "Password",
+  "passwordPlaceholder": "••••••",
+  "signInButton": "Sign In →",
+  "help": "Need help? Contact <1>support@finpilot.com</1>",
+  "marketing": {
+    "headline": "Streamline your <1>expense management</1>",
+    "description": "Modern, secure, and efficient expense tracking and approval workflows for enterprise teams.",
+    "trust": "📱 Trusted by 500+ companies worldwide",
+    "transparency": "🔒 Transparency comes first"
+  }
+}

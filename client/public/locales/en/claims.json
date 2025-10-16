@@ -1,0 +1,26 @@
+{
+  "title": "My Claims",
+  "subtitle": "Manage and track your expense claims",
+  "noClaims": "No claims found",
+  "clearFilters": "Clear Filters",
+  "newClaim": "New Claim",
+  "export": "Export",
+  "searchPlaceholder": "Search claims...",
+  "filter": {
+    "status": "Filter by status",
+    "category": "Filter by category",
+    "allStatuses": "All Statuses",
+    "allCategories": "All Categories",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "paid": "Paid"
+  },
+  "summary": {
+    "totalClaims": "Total Claims",
+    "pending": "Pending",
+    "approved": "Approved",
+    "totalValue": "Total Value"
+  },
+  "emptyMessage": "Try adjusting your search or filter criteria"
+}

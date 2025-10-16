@@ -1,0 +1,14 @@
+{
+  "logoTitle": "FinPilot",
+  "logoSubtitle": "Enterprise Finance",
+  "roleSelector": "Current Role",
+  "goodMorning": "Good morning, {{name}}",
+  "dashboardRole": "{{role}} Dashboard",
+  "nav": {
+    "dashboard": "Dashboard",
+    "myClaims": "My Claims",
+    "approvals": "Approvals",
+    "payments": "Payments",
+    "settings": "Settings"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "logoTitle": "Armaturenbrett",
+  "logoSubtitle": "Unternehmensfinanzen",
+  "roleSelector": "Aktuelle Rolle",
+  "goodMorning": "Guten Morgen, {{name}}",
+  "dashboardRole": "{{role}} Dashboard",
+  "nav": {
+    "dashboard": "Dashboard",
+    "myClaims": "Meine Ansprüche",
+    "approvals": "Genehmigungen",
+    "payments": "Zahlungen",
+    "settings": "Einstellungen"
+  }
+}

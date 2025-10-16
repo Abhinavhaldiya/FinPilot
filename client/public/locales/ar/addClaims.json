@@ -1,0 +1,18 @@
+{
+  "addClaim": {
+    "title": "إضافة مطالبة جديدة",
+    "subtitle": "املأ النموذج أدناه لتقديم طلب المصاريف الخاص بك",
+    "back": "العودة إلى المطالبات",
+    "claimType": "نوع المطالبة",
+    "date": "التاريخ",
+    "upload": "تحميل الملفات",
+    "description": "الوصف",
+    "contact": "معلومات الاتصال",
+    "amount": "المبلغ",
+    "submit": "إرسال",
+    "selectPlaceholder": "اختر نوع المطالبة",
+    "descriptionPlaceholder": "قدّم تفاصيل إضافية حول المطالبة",
+    "contactPlaceholder": "أدخل بريدك الإلكتروني أو رقم الهاتف",
+    "amountPlaceholder": "أدخل المبلغ"
+  }
+}

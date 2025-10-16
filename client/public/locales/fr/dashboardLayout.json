@@ -1,0 +1,14 @@
+{
+  "logoTitle": "FinPilot",
+  "logoSubtitle": "Finance d'entreprise",
+  "roleSelector": "Rôle actuel",
+  "goodMorning": "Bonjour, {{name}}",
+  "dashboardRole": "Tableau de bord {{role}}",
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "myClaims": "Mes réclamations",
+    "approvals": "Approbations",
+    "payments": "Paiements",
+    "settings": "Paramètres"
+  }
+}

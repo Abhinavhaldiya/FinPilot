@@ -11,6 +11,7 @@ import {
 } from "@/components/custom/Select";
 import ClaimCard, { Claim } from "@/components/claims/ClaimCard";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Mock data for claims
 const mockClaims: Claim[] = [
@@ -62,6 +63,8 @@ const mockClaims: Claim[] = [
 ];
 
 const Claims = () => {
+  const {t} = useTranslation("claims");
+
   const [claims] = useState<Claim[]>(mockClaims);
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
@@ -84,9 +87,9 @@ const Claims = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold">My Claims</h1>
+          <h1 className="text-3xl font-bold">{t("title")}</h1>
           <p className="text-muted-foreground">
-            Manage and track your expense claims
+            {t("subtitle")}
           </p>
         </div>
         <div className="flex gap-2">
@@ -125,12 +128,12 @@ const Claims = () => {
             }}
           >
             <Download className="w-4 h-4" />
-            Export
+            {t("export")}
           </Button>
 
           <Button variant="enterprise" className="gap-2">
             <Plus className="w-4 h-4" />
-            <Link to="/addclaims">New Claim</Link>
+            <Link to="/addclaims">{t("newClaim")}</Link>
           </Button>
         </div>
       </div>
@@ -141,7 +144,7 @@ const Claims = () => {
           <div className="relative">
             <Search className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
             <Input
-              placeholder="Search claims..."
+              placeholder={t("searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
@@ -151,23 +154,23 @@ const Claims = () => {
 
         <Select value={statusFilter} onValueChange={setStatusFilter}>
           <SelectTrigger className="w-full sm:w-48">
-            <SelectValue placeholder="Filter by status" />
+            <SelectValue placeholder={t("filter.status")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Statuses</SelectItem>
-            <SelectItem value="pending">Pending</SelectItem>
-            <SelectItem value="approved">Approved</SelectItem>
-            <SelectItem value="rejected">Rejected</SelectItem>
-            <SelectItem value="paid">Paid</SelectItem>
+            <SelectItem value="all">{t("filter.allStatuses")}</SelectItem>
+            <SelectItem value="pending">{t("filter.pending")}</SelectItem>
+            <SelectItem value="approved">{t("filter.approved")}</SelectItem>
+            <SelectItem value="rejected">{t("filter.rejected")}</SelectItem>
+            <SelectItem value="paid">{t("filter.paid")}</SelectItem>
           </SelectContent>
         </Select>
 
         <Select value={categoryFilter} onValueChange={setCategoryFilter}>
           <SelectTrigger className="w-full sm:w-48">
-            <SelectValue placeholder="Filter by category" />
+            <SelectValue placeholder={t("filter.category")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Categories</SelectItem>
+            <SelectItem value="all">{t("filter.allCategories")}</SelectItem>
             {categories.map(category => (
               <SelectItem key={category} value={category}>
                 {category}
@@ -188,16 +191,16 @@ const Claims = () => {
             <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
               <Filter className="w-8 h-8 text-muted-foreground" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">No claims found</h3>
+            <h3 className="text-lg font-semibold mb-2">{t("noClaims")}</h3>
             <p className="text-muted-foreground mb-4">
-              Try adjusting your search or filter criteria
+              {t("emptyMessage")}
             </p>
             <Button variant="outline" onClick={() => {
               setSearchQuery("");
               setStatusFilter("all");
               setCategoryFilter("all");
             }}>
-              Clear Filters
+              {t("clearFilters")}
             </Button>
           </div>
         )}
@@ -210,25 +213,25 @@ const Claims = () => {
             <div className="text-2xl font-bold text-foreground">
               {filteredClaims.length}
             </div>
-            <div className="text-sm text-muted-foreground">Total Claims</div>
+            <div className="text-sm text-muted-foreground">{t("summary.totalClaims")}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-warning">
               {filteredClaims.filter(c => c.status === 'pending').length}
             </div>
-            <div className="text-sm text-muted-foreground">Pending</div>
+            <div className="text-sm text-muted-foreground">{t("summary.pending")}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-success">
               {filteredClaims.filter(c => c.status === 'approved' || c.status === 'paid').length}
             </div>
-            <div className="text-sm text-muted-foreground">Approved</div>
+            <div className="text-sm text-muted-foreground">{t("summary.approved")}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-primary">
               ${filteredClaims.reduce((sum, claim) => sum + claim.amount, 0).toLocaleString()}
             </div>
-            <div className="text-sm text-muted-foreground">Total Value</div>
+            <div className="text-sm text-muted-foreground">{t("summary.totalValue")}</div>
           </div>
         </div>
       )}

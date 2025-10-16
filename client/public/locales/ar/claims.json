@@ -1,0 +1,26 @@
+{
+  "title": "مطالباتي",
+  "subtitle": "إدارة وتتبع طلبات مصاريفك",
+  "noClaims": "لم يتم العثور على مطالبات",
+  "clearFilters": "مسح الفلاتر",
+  "newClaim": "مطالبة جديدة",
+  "export": "تصدير",
+  "searchPlaceholder": "ابحث عن المطالبات...",
+  "filter": {
+    "status": "تصفية حسب الحالة",
+    "category": "تصفية حسب الفئة",
+    "allStatuses": "جميع الحالات",
+    "allCategories": "جميع الفئات",
+    "pending": "قيد الانتظار",
+    "approved": "معتمد",
+    "rejected": "مرفوض",
+    "paid": "مدفوع"
+  },
+  "summary": {
+    "totalClaims": "إجمالي المطالبات",
+    "pending": "قيد الانتظار",
+    "approved": "معتمد",
+    "totalValue": "إجمالي القيمة"
+  },
+  "emptyMessage": "حاول تعديل معايير البحث أو التصفية"
+}

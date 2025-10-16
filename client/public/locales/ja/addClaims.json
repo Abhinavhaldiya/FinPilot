@@ -1,0 +1,18 @@
+{
+  "addClaim": {
+    "title": "新しい請求を追加",
+    "subtitle": "経費請求を提出するには、以下のフォームに入力してください",
+    "back": "請求に戻る",
+    "claimType": "請求タイプ",
+    "date": "日付",
+    "upload": "ファイルをアップロード",
+    "description": "説明",
+    "contact": "連絡先情報",
+    "amount": "金額",
+    "submit": "送信",
+    "selectPlaceholder": "請求タイプを選択",
+    "descriptionPlaceholder": "請求に関する詳細を入力してください",
+    "contactPlaceholder": "メールまたは電話番号を入力してください",
+    "amountPlaceholder": "金額を入力してください"
+  }
+}

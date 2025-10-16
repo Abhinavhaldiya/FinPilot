@@ -1,0 +1,20 @@
+{
+  "welcome": "Bon retour",
+  "signInDesc": "Connectez-vous à votre compte FinPilot",
+  "tabs": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire"
+  },
+  "email": "Adresse e-mail",
+  "emailPlaceholder": "alex@company.com",
+  "password": "Mot de passe",
+  "passwordPlaceholder": "••••••",
+  "signInButton": "Se connecter →",
+  "help": "Besoin d'aide ? Contactez <1>support@finpilot.com</1>",
+  "marketing": {
+    "headline": "Rationalisez votre <1>gestion des dépenses</1>",
+    "description": "Suivi et approbation des dépenses modernes, sécurisés et efficaces pour les équipes d'entreprise.",
+    "trust": "📱 Fiable par plus de 500 entreprises dans le monde",
+    "transparency": "🔒 La transparence passe en premier"
+  }
+}

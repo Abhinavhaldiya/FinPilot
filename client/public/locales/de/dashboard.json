@@ -1,0 +1,21 @@
+{
+  "title": "Armaturenbrett",
+  "subtitle": "Übersicht über Ihre Spesenanträge und Genehmigungen",
+  "stats": {
+    "totalClaims": "Gesamtansprüche",
+    "pendingReview": "Ausstehende Überprüfung",
+    "approved": "Genehmigt",
+    "totalAmount": "Gesamtbetrag",
+    "changeFromLastMonth": "seit letztem Monat"
+  },
+  "recentClaims": "Letzte Ansprüche",
+  "quickActions": "Schnellaktionen",
+  "submitNewClaim": "Neuen Anspruch einreichen",
+  "reviewPending": "Überprüfung ausstehend",
+  "viewReports": "Berichte ansehen",
+  "notifications": "Benachrichtigungen",
+  "claimApproved": "wurde genehmigt",
+  "paymentProcessed": "Zahlung von <1>{{amount}}</1> verarbeitet",
+  "viewAllClaims": "Alle Ansprüche ansehen",
+  "newClaim": "Neuer Anspruch"
+}

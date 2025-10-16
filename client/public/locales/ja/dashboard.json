@@ -1,0 +1,21 @@
+{
+  "title": "ダッシュボード",
+  "subtitle": "経費申請と承認の概要",
+  "stats": {
+    "totalClaims": "合計請求",
+    "pendingReview": "レビュー保留中",
+    "approved": "承認済み",
+    "totalAmount": "合計金額",
+    "changeFromLastMonth": "先月からの変化"
+  },
+  "recentClaims": "最近の請求",
+  "quickActions": "クイックアクション",
+  "submitNewClaim": "新しい請求を提出",
+  "reviewPending": "保留中のレビュー",
+  "viewReports": "レポートを見る",
+  "notifications": "通知",
+  "claimApproved": "が承認されました",
+  "paymentProcessed": "<1>{{amount}}</1> の支払いが処理されました",
+  "viewAllClaims": "すべての請求を見る",
+  "newClaim": "新しい請求"
+}
