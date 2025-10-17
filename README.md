@@ -69,16 +69,18 @@
 ## 🚀 Quick Start
 
 ### Prerequisites
-- **Node.js** v18+ 
-- **PostgreSQL** v13+
-- **npm** or **bun**
+| Tool           | Version | Check Command    |
+| -------------- | ------- | ---------------- |
+| **Node.js**    | ≥ 18    | `node -v`        |
+| **npm**        | ≥ 9     | `npm -v`         |
+| **Git**        | Any     | `git --version`  |
+| **PostgreSQL** | ≥ 13    | `psql --version` |
 
 ### 1. Clone the Repository
 ````bash
 git clone https://github.com/Abhinavhaldiya/FinPilot.git
 cd FinPilot
 ```
-
 
 ### 2. Install Dependencies
 ```bash
@@ -99,6 +101,12 @@ cd server && npm install && cd ..
 cp server/.env.example server/.env
 cp client/.env.example client/.env
 ```
+
+``` Windows (PowerShell)
+copy server\.env.example server\.env
+copy client\.env.example client\.env
+```
+
 
 
 ### 4. Configure Environment Variables
@@ -170,10 +178,21 @@ FinPilot/
 │   ├── schema.prisma       # Database schema
 │   └── seed.js             # Database seeding
 ├── docs/                   # Documentation and diagrams
-└── README.md
+└── README.md               # Installation and project information
 ```
 
 ---
+
+###Troubleshooting
+| Problem                       | Fix                                                           |
+| ----------------------------- | ------------------------------------------------------------- |
+| `Could not read package.json` | Run `npm install` inside `client/` and `server/` only         |
+| `.env.example` missing        | Create `.env` manually as shown above                         |
+| Database error                | Make sure PostgreSQL is running and credentials match `.env`  |
+| Port 5000 busy                | Change `PORT` in `server/.env` to another number (e.g., 5001) |
+| Frontend “API not reachable”  | Backend server must be running before frontend                |
+
+
 
 ## 🤝 Contributing
 
